@@ -1,0 +1,22 @@
+# GuessTheNumberGame
+import random
+
+guesses = 8
+number = random.randint(1, 90)
+win = false
+
+while guesses > 0:
+    guess = int(input("Guess: "))
+
+    guesses -= 1
+
+    if guess > number:
+        print("your guess is too high,you have", guesses, "remaining")
+    elif guess < number:
+        print("your guess is too low,you have", guesses, "remaining")
+    else:
+        print("congrats,you have guess the correct number, and won the game")
+        win = True
+        guesses = 0
+        if win == False:
+            print("Sorry, you didn't guess the number. The number was", number
